@@ -1,0 +1,286 @@
+* {
+    /* utilisation du sélecteur universel pour initialiser à 0 les marges */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Police d'écriture pour tout le site: Kufam */
+    font-family: "Kufam", sans-serif;
+}
+
+header {
+    background-color:#FAE5D1;
+    /* taille du fond */
+    height: 115px;
+    /* on centre l'image */
+    text-align: center;
+}
+
+/* On veut viser l'image du logo du haut exclusivement */
+header img {
+    /* on se sert de la taille du fond pour ajuster la dimension du logo et l'espacement (padding) */
+    height: 105px;
+    padding: 5px;
+} 
+
+nav {
+    /* ajustement (compensation) de la marge du haut par rapport à la ligne 48 */
+    margin-top: 20px;
+}
+
+nav ul {
+     /* on enlève les points devant les liens dans la liste ul */
+    list-style: none;
+    /* on veut tout mettre à la ligne */
+    display: flex;
+    /* on espace chaque liens */
+    justify-content: space-between;
+    /* ajoute de l'espace à gauche et à droite des liens */
+    margin: 0px 35px 0px 35px;
+}
+
+nav ul li a {
+    /* on enlève le soulignage des liens */
+    text-decoration: none;
+    color: #FAE5D1;
+    background-color: #1E1E1E;
+    /* espacement tout autour des boutons de la nav (acceuil, bougies, etc...) */
+    padding: 20px 20px 20px 20px;
+    /* Arrondissement des 2 bords du bas */
+    border-radius: 0px 0px 10px 10px;
+}
+
+section {
+    /* disposition en lign des boutons */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* espacement avec le header */
+    padding-top: 150px;
+    /* on ne prend pas toute la page */
+    width: 80%;
+}
+
+section img {
+    width: 100%;
+    /* arrondissement coins images */
+    border-radius: 10px;
+}
+
+article {
+    width: 40%;
+    padding: 15px;
+    background-color: #FAE5D1;
+    /* arrondissement coins articles */
+    border-radius: 25px;
+    /* bordures autour avec pointillés marrons */
+    border: 2px dashed #AC7961;
+    /* ajout d'ombre autour également */
+    box-shadow: 1px 3px 3px gray;
+    /* textes en gris */
+    color:#1E1E1E;
+    /* parent */
+    position: relative;
+}
+
+.positiongram {
+    /* il faut avant un parent en position relative et c'est la balise article au dessus */
+    position: absolute;
+    /* réglage par rapport à h2 donc on bouge le texte vers la droite, en pourcentage pour le responsive */
+    left: 83%;
+    /* ajustement texte un peu plus bas */
+    padding-top: 15px;
+}
+
+/* concerne les étoiles des articles */
+article i {
+    color: #AC7961;
+    /* espacement haut étoiles */
+    padding-top: 25px;
+    /* taille des étoiles */
+    font-size: 30px;
+}
+
+/* c'est le bouton pour mettre au panier */
+.shopping {
+    background-color: #1E1E1E;
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    color: #FAE5D1;
+    margin-top: 25px;
+}
+
+.shopping i {
+    /* logo caddie avec ajustements */
+    color: #FAE5D1;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    /* taille logo */
+    font-size: 30px;
+}
+
+.little {
+    font-size: 15px;
+    margin: 35px 20px 0px 20px;
+}
+
+.big {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+h2 {
+    /* titres des articles */
+    font-size: 20px;
+    /* on enlève le gras des titres */
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+} 
+
+footer {
+    margin-top: 150px;
+    background-color: #AC7961;
+    text-align: center;
+}
+
+/* on met cote à cote la partie gauche (partleft) et la partie droite */
+.flex {
+    display: flex;
+}
+
+/* 50% + 50% = 100% */
+.partleft, .partright {
+    width: 50%;
+    padding-left: 25px;
+}
+
+.partright p {
+    /* alignement de "Nous suivre au centre de la partie gauche */
+    text-align: center;
+    /* espacement entre logos réseaux et le texte copyright */
+    margin-top: 55px;
+}
+
+footer img {
+    /* Taille logo fixe */
+    height: 100px;
+    /* Arrondissement des coins du logo */
+    border-radius: 10px;
+    /* c'est en négatif car on fait ressortir l'image de moitié de sa taille du footer */
+    margin-top: -50px;
+}
+
+footer ul {
+    /* (couleur texte) */
+    color:#FAE5D1;
+    /* listeà gauche */
+    text-align: start;
+    /* mais pas trop à gauche donc ajout espace gauche */
+    margin-left: 45px;
+}
+
+footer ul li {
+    /* espacement entre les liens */
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    color:#FAE5D1;
+}
+
+footer p {
+    text-align: start;
+    color:#FAE5D1;
+    /* espacement en dessous des paragraphes */
+    margin-bottom: 15px;
+}
+
+footer i {
+    /* couleur logos réseaux sociaux */
+    color: #FAE5D1;
+    /* espacement autour des logos */
+    margin: 15px;
+    /* taille logo */
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px){
+    nav {
+        /* couleur pour remplir tout le bloc */
+        background-color: #1E1E1E;
+        text-align: center;
+        /* plus besoin compensation */
+        margin-top: 0px;
+        padding: 10px;
+    }
+    
+    nav ul {
+       display: block;
+       /* plus besoin espacement */
+       margin: 0px;
+   }
+
+    nav ul li {
+        /* espacement entre Acceuil, bougies, etc... */
+        margin: 25px 0px 25px 0px;
+        /* agrandissement de la police */
+        font-size: 20px;
+    }
+   
+    nav ul li a {
+        /* plus besoin padding */
+        padding: 0px;
+        /* plus besoin d'arrondir */
+        border-radius: 0px;
+    }
+
+    section {
+        /* chaque article à la ligne en passant en version mobile */
+        display: wrap;
+        flex-wrap: wrap;
+        /* on reprend toute la largeur pour la section */
+        width: 100%;
+        /* ajustement à gauche et à droite par rapport à la largeur de 90% (dans article plus bas) */
+        padding-left: 5%;
+        /* ajustement espace entre les articles (toujours 150px) */
+        gap: 150px;
+    }
+
+    article {
+        /* chaque article prend en largeur 90% de la page */
+        width: 95%;
+        padding: 25px;
+        background-color: #FAE5D1;
+    }
+
+    /* on passe à grid pour que la partie gauche et la droite ne soient plus cote à cote */
+    .flex {
+        display: grid;
+    }
+
+    .partleft {
+        /* centrage liste ul */
+        margin: 0 auto;
+        /* remise à zero padding pour éviter décalage */
+        padding-left: 0px;
+    }
+
+    .partleft p {
+        /* espacement entre logo et le texte de 50px + centrage */
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .partleft ul {
+        /* petit ajustement à gauche de la liste pour que ce soit plus conforme */
+        padding-left: 45px;
+    }
+
+    .partright {
+        /* on reprend toute la largeur car on avait coupé en 2 */
+        width: 100%;
+        /* remise à zero padding pour éviter décalage */
+        padding-left: 0px;
+    }
+}
